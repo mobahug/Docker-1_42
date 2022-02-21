@@ -1,0 +1,11 @@
+docker run -d --name spawning-pool --restart=on-failure:5 -e MYSQL_ROOT_PASSWORD=Kerrigan -e MYSQL_DATABASE=zerglings -v hatchery:/var/lib/mysql mysql --default-authentication-plugin=mysql_native_password
+
+# https://docs.docker.com/engine/reference/run/#restart-policies---restart
+# https://docs.datadoghq.com/security_platform/default_rules/cis-docker-1.2.0-5.14/
+# https://docs.docker.com/compose/environment-variables/
+# https://www.configserverfirewall.com/docker/run-mysql-docker-containers/
+# https://www.ecloudcontrol.com/where-are-docker-volumes-stored/
+# https://medium.com/@crmcmullen/how-to-run-mysql-8-0-with-native-password-authentication-502de5bac661
+
+# on m1 macbook first use:
+# docker pull --platform linux/x86_64 mysql

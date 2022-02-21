@@ -1,0 +1,3 @@
+docker -dp 8081:80 --name roach-warden --link spawning-pool:db phpmyadmin/phpmyadmin
+
+# https://www.cloudsavvyit.com/13842/how-to-run-phpmyadmin-in-a-docker-container/

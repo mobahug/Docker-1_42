@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker exec spawning-pool env
 
 # docker inspect -f \ '{{range $index, $value := .Config.Env}}{{$value}} {{end}}' spawning-pool

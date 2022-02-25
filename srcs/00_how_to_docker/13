@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker logs --follow spawning-pool
 
 # https://docs.docker.com/engine/reference/commandline/logs/

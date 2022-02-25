@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# on school computer port 2377 didn't work so we had to make this task that
+# the manager is the VM
+# i used roger skyline disk so i had to allow in the firewall ports
+# in order to be able to joint the school computer as a worker
+# to the manager VM
+# https://www.digitalocean.com/community/tutorials/how-to-configure-the-linux-firewall-for-docker-swarm-on-ubuntu-16-04
+
+# make sure you don t have in use nodes
+docker swarm leave --force
+
+# on vm:
+
+docker swarm init
+
+# take the output and paste to school computer terminal
+
+docker swarm join --token SWMTKN-1-32sgd8raamnm3521n54gcumc08gcu9df6xdqpgz23vj1vjyovu-18hzmrwereirxau1s91ahnbfn 10.11.1.200:2377
+
+# make sure you don t have in use nodes
+docker swarm leave --force

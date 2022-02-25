@@ -1,0 +1,15 @@
+#!/bin/bash
+
+docker service create \
+-d --network=overmind \
+--name orbital-command \
+-e RABBITMQ_DEFAULT_USER=root \
+-e RABBITMQ_DEFAULT_PASS=hamburger \
+rabbitmq
+
+# https://www.section.io/engineering-education/dockerize-a-rabbitmq-instance/
+# https://hub.docker.com/_/rabbitmq
+
+# result:
+
+# xjnedy0jntppe1d4u81liokxp

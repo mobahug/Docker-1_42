@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# https://docs.docker.com/network/overlay/
+
+docker network create -d overlay overmind
+
+# result:
+# kwmk8vx7ufce1fslericp1bs2
+
+# docker network ls
+#listing the network and should show the overmind network what we just created

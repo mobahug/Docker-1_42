@@ -7,3 +7,6 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debi
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce
+
+
+# install docker on terminal step by step

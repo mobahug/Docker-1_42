@@ -1,0 +1,13 @@
+#!/bin/bash
+
+docker service create -d
+--name marines
+--network overmind
+--replicas=2
+-e OC_USERNAME=magic
+-e OC_PASSWD=hamburger
+42school/marine-squad
+
+# result:
+
+# y62pgyfvgq3ej9gdj9ure6qon

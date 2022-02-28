@@ -1,2 +1,15 @@
 #!/bin/bash
 
+docker service create -d \
+--name engineering-bay \
+--network overmind \
+--replicas 2 \
+-e OC_USERNAME=magic \
+-e OC_PASSWD=hamburger \
+42school/engineering-bay
+
+# https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
+# https://hub.docker.com/r/42school/engineering-bay
+# result:
+
+# 9qogqzcct06m5fq0qexsqr0fo

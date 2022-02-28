@@ -1,15 +1,9 @@
 #!/bin/bash
 
-docker service create -d \
---name engineering-bay \
---network overmind \
---replicas 2 \
--e OC_USERNAM=root \
--e OC_PASSWD=hamburger \
-42school/engineering-bay
+docker service ls
 
-# https://docs.docker.com/engine/swarm/how-swarm-mode-works/services/
-# https://hub.docker.com/r/42school/engineering-bay
-# result:
-
-# 9qogqzcct06m5fq0qexsqr0fo
+# have to be on the manager swarm which in our case is the virtual machine
+# the reason why not the school iMac because stuff said port 2377 not working that way for
+# some reason, so had to make opposite way the task,
+# so the manager is now our VM and there we listing the created
+# services

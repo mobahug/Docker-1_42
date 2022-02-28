@@ -3,7 +3,7 @@
 docker service create -d \
 --name engineering-bay \
 --network overmind \
---replicas 2 \
+--replicas=2 \
 -e OC_USERNAME=magic \
 -e OC_PASSWD=hamburger \
 42school/engineering-bay

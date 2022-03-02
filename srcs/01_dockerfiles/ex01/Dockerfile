@@ -35,4 +35,4 @@ RUN apt-get update && \
 
 WORKDIR /teamspeak3-server_linux_amd64
 
-ENTRYPOINT [ "ts3server" ]
+ENTRYPOINT [ "./ts3server" ]

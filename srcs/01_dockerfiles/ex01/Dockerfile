@@ -36,3 +36,6 @@ RUN apt-get update && \
 WORKDIR /teamspeak3-server_linux_amd64
 
 ENTRYPOINT [ "./ts3server" ]
+
+# usage:
+#		 docker run -dp 9987:9987/udp 123123123 ex01

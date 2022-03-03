@@ -38,4 +38,10 @@ WORKDIR /teamspeak3-server_linux_amd64
 ENTRYPOINT [ "./ts3server" ]
 
 # usage:
-#		docker run -dp 9987:9987/udp -p 10011:10011 -p 30033:30033 testing ex01
+#		 docker run -dp 9987:9987/udp 123123123 ex01
+
+# ON LAPTOP (Macbook Air M1 2020)
+
+# docker build --platform=linux/x86_64 -t testing4 ex01
+
+# docker run -it -dp 9987:9987/udp -p 10011:10011 -p 30033:30033 testing4 ex01

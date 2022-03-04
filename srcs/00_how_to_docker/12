@@ -1,4 +1,3 @@
-#!/bin/bash
 
 docker -dp 8081:80 \
 --name roach-warden \

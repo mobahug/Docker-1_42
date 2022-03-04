@@ -1,4 +1,3 @@
-#!/bin/bash
 
 docker run -d --name spawning-pool \
 --restart=on-failure:5 \

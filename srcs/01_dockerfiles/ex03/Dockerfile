@@ -1,24 +1,24 @@
-FROM ubuntu
-
-RUN apt-get update && apt-get upgrade \
-	&& apt-get -y install \
-	wget \
-	openssh-server \
-	ca-certificates \
-	postfix
-
-RUN wget \
-	https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh \
-	&& chmod 777 ./script.deb.sh && ./script.deb.sh
-RUN apt-get update && apt-get install tzdata gitlab-ce
-
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-EXPOSE 443
-EXPOSE 80
-EXPOSE 22
-
-ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && sleep 2 && gitlab-ctl reconfigure && tail -f /dev/null
+#FROM ubuntu
+#
+#RUN apt-get update && apt-get upgrade \
+#	&& apt-get -y install \
+#	wget \
+#	openssh-server \
+#	ca-certificates \
+#	postfix
+#
+#RUN wget \
+#	https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh \
+#	&& chmod 777 ./script.deb.sh && ./script.deb.sh
+#RUN apt-get update && apt-get install tzdata gitlab-ce
+#
+#RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+#
+#EXPOSE 443
+#EXPOSE 80
+#EXPOSE 22
+#
+#ENTRYPOINT (/opt/gitlab/embedded/bin/runsvdir-start &) && sleep 2 && gitlab-ctl reconfigure && tail -f /dev/null
 
 # Script to install gitlab inside the container
 #

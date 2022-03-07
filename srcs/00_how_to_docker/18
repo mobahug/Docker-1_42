@@ -8,4 +8,5 @@ apt-cache policy docker-ce
 sudo apt install docker-ce
 
 
-# install docker on terminal step by step
+# install docker on terminal step by step, cuz by default it wasn t there
+# docker documentation

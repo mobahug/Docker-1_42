@@ -7,8 +7,8 @@
 
 FROM alpine:latest
 
-RUN apk update
-RUN apk upgrade
-RUN apk add vim
+RUN apk update \
+	&& apk upgrade \
+	&& apk add vim
 
 ENTRYPOINT [ "vim" ]

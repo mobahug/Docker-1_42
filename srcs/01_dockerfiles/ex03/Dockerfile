@@ -52,6 +52,13 @@ EXPOSE 22 443 80
 
 CMD (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure && service ssh restart && gitlab-ctl tail
 
+# ubuntu:focal		lattest version of ubuntu version
+
+# DEBIAN_FRONTEND=noninteractive -	the system will install everything by default
+#									won't ask questions from the user
+
+###############################################
+###############################################
 # Build:
 # docker build -t ghorvath/gitlab .
 # Run:

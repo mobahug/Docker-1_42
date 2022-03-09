@@ -1,15 +1,18 @@
+FROM archlinux
 
-FROM node
+RUN pacman -Sy --noconfirm base-devel git
 
-ADD . /app
+ARG AUR_PACKAGE=taskcore
 
-WORKDIR /app
+RUN useradd builduser -m \
+  && passwd -d builduser \
+  && cd /home/builduser \
+  && git clone "https://aur.archlinux.org/$AUR_PACKAGE.git" target \
+  && chown builduser -R target \
+  && (printf 'builduser ALL=(ALL) ALL\n' | tee -a /etc/sudoers) \
+  && sudo -u builduser bash -c 'cd ~/target && makepkg -si --noconfirm' \
+  && pacman -Rns $(pacman -Qtdq)
 
-RUN npm install \
-    && npm install -g bower \
-    && bower install --allow-root \
-    $$ npm install -g nodemon
+WORKDIR /home/builduser/target
 
-EXPOSE 3000
-
-CMD ["nodemon", "server.js"]
+CMD ["bash"]

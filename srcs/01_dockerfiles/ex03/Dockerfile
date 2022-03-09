@@ -73,3 +73,5 @@ CMD (/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigure && ser
 # 5. Clone the test repo with ssh and https addresses:
 #         git clone ssh://git@localhost:4242/ghorvath/test.git ssh_test
 #         git clone https://localhost/ghorvath/test.git https_test
+# For HTTPS:
+# GIT_SSL_NO_VERIFY=true git clone --recursive https://localhost/root/test.git

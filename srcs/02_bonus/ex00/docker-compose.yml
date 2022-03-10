@@ -13,9 +13,9 @@ services:
     image: mariadb:10.6
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: Karrigan
+      MYSQL_ROOT_PASSWORD: 12345678
       MYSQL_USER: magic
-      MYSQL_PASSWORD: magic
+      MYSQL_PASSWORD: 12345678
     expose:
         - "40000"
     ports:

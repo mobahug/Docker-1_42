@@ -13,7 +13,7 @@ services:
         volumes:
             - mariadb-volume:/var/lib/mysql
         environment:
-            TZ: "Europe/Rome"
+            TZ: "Europe/Helsinki"
             MYSQL_ALLOW_EMPTY_PASSWORD: "no"
             MYSQL_ROOT_PASSWORD: "rootpwd"
             MYSQL_USER: 'testuser'

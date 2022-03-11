@@ -17,11 +17,7 @@ services:
       # https://github.com/itzg/docker-minecraft-server#memory-limit
       #MEMORY: 2G
 
-      # uncomment this to import a saved game. (put your savegame directory in the saves-to-import directory)
-      # WORLD: "/worlds/My-World"
-
     volumes:
-      - /Users/ulenius/workflow/docker-bonus/srcs/02_bonus/ex02/temp_data:/data
-
+      - ./temp_data:/data
 
 #docker run -e EULA=TRUE -p 25565:25565 -v /Users/ulenius/workflow/docker-bonus/srcs/02_bonus/ex02/temp_data:/data itzg/minecraft-server:latest

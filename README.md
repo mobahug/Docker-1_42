@@ -4,8 +4,9 @@
 
 The project first part we going through on the basic concepts of docker and how it's working.
 How volumes working, how to create networks. Introducing basic docker commands, what during the project will use a lot.
-Running 1 line commands and make via that containers, hosting wordpress, pypadmin pages.
-Creating Virtual machine and local machine manager-worker connection. So going through how docker's container management working.
+Running one line commands and make via that containers, hosting wordpress, pypadmin pages.
+Creating Virtual machine and local machine manager-worker connection.
+So going through how docker's container management working.
 Making via management different type of services in a very funny cool way.
 
 ## V.2 Part 2
@@ -24,6 +25,6 @@ In part to we bringing to a new level what we learned in Part 1 and we have to c
 ## V.3 Bonus Part
 
 We got freehand to use one line command, Dockerfiles or Docker-compose.
-i used Docker-compose to get know that too and be able to translate the 3 different type into each other if necessary.
+I used Docker-compose to get know that too and be able to translate the 3 different type into each other if necessary.
 Here I made two pypadmin host server with LAMP stuck environment.
 And for fun I made a compose file to host my own ***Minecraft*** server too and save the game too.

@@ -1,5 +1,6 @@
 
 docker run -d --name spawning-pool \
+--network gabor_network \
 --restart=on-failure:5 \
 -e MYSQL_ROOT_PASSWORD=Kerrigan \
 -e MYSQL_DATABASE=zerglings \
@@ -12,6 +13,10 @@ docker run -d --name spawning-pool \
 # https://www.configserverfirewall.com/docker/run-mysql-docker-containers/
 # https://www.ecloudcontrol.com/where-are-docker-volumes-stored/
 # https://medium.com/@crmcmullen/how-to-run-mysql-8-0-with-native-password-authentication-502de5bac661
+
+# CREATE NETWORK BEFORE EXECUTION:
+
+# docker network create gabor_network
 
 # on m1 macbook first use:
 # docker pull --platform linux/x86_64 mysql

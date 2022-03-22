@@ -1,4 +1,8 @@
-
-docker run -dp 8080:80 \
---name lair \
---link spawning-pool:mysql wordpress
+docker run --name lair \
+--network gabor_network \
+-p 8080:80 \
+-e WORDPRESS_DB_HOST='spawning-pool' \
+-e WORDPRESS_DB_USER='root' \
+-e WORDPRESS_DB_PASSWORD=Kerrigan \
+-e WORDPRESS_DB_NAME=zerglings \
+-d wordpress
